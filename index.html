@@ -6,13 +6,14 @@
 <title>住所⇄郵便番号変換ツール</title>
 <style>
   :root {
-    --bg: #f5f6f8;
+    --bg: #eef6f2;
     --card-bg: #ffffff;
-    --text: #1f2430;
-    --muted: #6b7280;
-    --border: #e2e5eb;
-    --accent: #2f6fed;
-    --accent-hover: #2559c7;
+    --text: #1f2e29;
+    --muted: #5f8a7c;
+    --border: #cfe6dc;
+    --accent: #82BEAA;
+    --accent-strong: #2f7d63;
+    --accent-strong-hover: #256b52;
     --error: #d64545;
   }
   * { box-sizing: border-box; }
@@ -33,10 +34,12 @@
     font-size: 20px;
     text-align: center;
     margin-bottom: 24px;
+    color: var(--accent-strong);
   }
   .card {
     background: var(--card-bg);
     border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
@@ -58,9 +61,9 @@
     font-size: 14px;
   }
   .tab.active {
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #fff;
-    border-color: var(--accent);
+    border-color: var(--accent-strong);
   }
   .panel { display: none; }
   .panel.active { display: block; }
@@ -84,19 +87,19 @@
   }
   input[type="text"]:focus {
     outline: none;
-    border-color: var(--accent);
+    border-color: var(--accent-strong);
   }
   button {
     padding: 10px 16px;
     border: none;
     border-radius: 8px;
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #fff;
     font-size: 14px;
     cursor: pointer;
   }
-  button:hover { background: var(--accent-hover); }
-  button:disabled { background: #a9b6cc; cursor: not-allowed; }
+  button:hover { background: var(--accent-strong-hover); }
+  button:disabled { background: #b7d3c7; cursor: not-allowed; }
   .result {
     margin-top: 16px;
     min-height: 24px;
@@ -112,7 +115,7 @@
   }
   .result .item .zip {
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent-strong);
     margin-bottom: 4px;
   }
   .hint {
